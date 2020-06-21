@@ -93,7 +93,7 @@
   }
   
   
-  .container-follow{
+  /* .container-follow{
     display: flex;
     align-items: center;
     /* justify-content: center; */
@@ -101,14 +101,14 @@
     text-align: center;
     /* background: grey; */
   }
-  
+/*   
   .cent ul{
     list-style: none;
     position: relative;
     display: inline-block;
-  }
+  } */
   
-  .cent ul .text{
+  /* .cent ul .text{
     position: absolute;
     top: 0; left:0; right: 0;
     background:#1f7a7a;
@@ -122,8 +122,8 @@
     opacity: 0;
     transition: opacity .5s .125s ease-out;
   }
-  
-  .cent ul li{
+   */
+  /* .cent ul li{
     display: inline-block;
     height: 50px; width: 50px;
     background: #1f7a7a;
@@ -138,8 +138,8 @@
   .cent ul li:hover{
     background: #1a6565;
   
-  }
-  .cent ul li i{
+  } */
+  /* .cent ul li i{
     color: #eee;
     font-size: 22px;
     opacity: 0;
@@ -159,4 +159,4 @@
   .cent ul:hover li{
     border-radius: 50px;
     margin: 0 3px;
-  }
+  } */ 
