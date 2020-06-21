@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script src="https://kit.fontawesome.com/5ba01f7dd3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="additional.css">
+    <title>Commercial Calculator</title>
+</head>
+<body>
+<!-- Header -->
+<header class="jumbotron">
+    <div class="container">
+        <div class="row row-header">
+            <div class="col-12">
+                <h1 class="heading">Commercial Calculator & Convertor</h1>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Body -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 ">
+            <div class="card">
+                <h3 class="card-header bg-dark text-white">S.I Calculator</h3>
+
+                <div class="card-body">
+                    <form>
+                        <div class="form-group row">
+                            <div  class="col-12 col-sm-9">
+                                <label for="principal">Principal(amount in Rs)</label>
+                                <input type="float" id="p">   
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div  class="col-12 col-sm-9">
+                                <label for="principal">Rate(per year)</label>
+                                <input type="float" id="r">   
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div  class="col-12 col-sm-9">
+                                <label for="principal">Time(in years)</label>
+                                <input type="float" id="t">   
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12 col-md-7 ">
+                              <button type="button" onclick="calculate()" class="btn btn-dark btn-lg" name="button">Evaluate</button>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12 col-md-7 ">
+                                <h3>SI : <span id="respond"></span></h3>  
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Log Convertor -->
+    <div class="row">
+        <div class="col-12 col-md-10 ">
+            <div class="card">
+                <h3 class="card-header bg-dark text-white">Log Calculator</h3>
+
+                <div class="card-body">
+                    <form>
+                        <div class="form-group row">
+                            <div  class="col-12 col-md-12">
+                                <label for="principal">Value(to be converted) :</label>
+                                <input type="float" id="log">   
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12 col-md-12 ">
+                                <button type="button" onclick="calLog()" class="btn btn-dark btn-lg" name="button">Convert</button>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12 col-md-12 ">
+                                <h3>Converted : <span id="loged"></span></h3>  
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- S.I Amount -->
+    <div class="row">
+        <div class="col-12 col-md-10 ">
+            <div class="card">
+                <h3 class="card-header bg-dark text-white">S.I Amount Calculator</h3>
+
+                <div class="card-body">
+                    <form>
+                        <div class="form-group row">
+                            <div  class="col-12 col-sm-9">
+                                <label for="principal">Principal(amount in Rs)</label>
+                                <input type="float" id="p1">   
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div  class="col-12 col-sm-9">
+                                <label for="rate">Rate(per year)</label>
+                                <input type="float" id="r1">   
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div  class="col-12 col-sm-9">
+                                <label for="time">Time(in years)</label>
+                                <input type="float" id="t1">   
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12 col-md-7 ">
+                                <button type="button" onclick="calculateAmount()" class="btn btn-dark btn-lg" name="button">Evaluate</button>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12 col-md-7 ">
+                                <h3>SI Amount(in Rs) : <span id="amount"></span></h3>  
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Compound Intrest Amount -->
+    <div class="row">
+        <div class="col-12 col-md-10 ">
+            <div class="card">
+                <h3 class="card-header bg-dark text-white">C.I Amount Calculator</h3>
+
+                <div class="card-body">
+                    <form>
+                        <div class="form-group row">
+                            <div  class="col-12 col-sm-9">
+                                <label for="principal">Principal(amount in Rs)</label>
+                                <input type="float" id="p2">   
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div  class="col-12 col-sm-9">
+                                <label for="rate">Rate(per year)</label>
+                                <input type="float" id="r2">   
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div  class="col-12 col-sm-9">
+                                <label for="rate">Compound(per year)</label>
+                                <input type="float" id="c2">   
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div  class="col-12 col-sm-9">
+                                <label for="time">Time(in years)</label>
+                                <input type="float" id="t2">   
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12 col-md-7 ">
+                                <button type="button" onclick="calculateCompound()" class="btn btn-dark btn-lg" name="button">Evaluate</button>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12 col-md-10 ">
+                                <h3>Total Accrued Amount (principal + interest)(in Rs) : <span id="aa"></span></h3>  
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<footer class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-sm-10 ">
+          <h6>Created &amp; Developed by:</h6>
+          <p>&copy Bharat Paliwal</p>
+        </div>
+        <div class="col-12 col-sm-10">
+  <!--
+              <h5>Follow me:</h5>
+                <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/bharat.paliwal.3958914" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/bharat-paliwal-ab7169179/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/BharatP58380618" target="_blank"><i class="fa fa-twitter"></i></a> -->
+        <div class="container-follow">
+          <div class="cent">
+            <ul>
+              <li> <a  href="https://www.facebook.com/bharat.paliwal.3958914" target="_blank"><i class="fab fa-facebook-f"></i></a>  </li>
+              <li> <a href="https://www.linkedin.com/in/bharat-paliwal-ab7169179/" target="_blank"><i class="fab fa-twitter"></i></a>  </li>
+              <li> <i class="fab fa-instagram"></i> </li>
+              <li> <a href="https://twitter.com/BharatP58380618" target="_blank"><i class="fab fa-linkedin-in"></i></a>  </li>
+              <!-- <li> <i class="fab fa-youtube"></i> </li> -->
+              <div class="text">Follow</div>
+            </ul>
+          </div>
+        </div>
+  
+      </div>
+      <div class="col-12 col-sm-10">
+        <!-- <button onclick="like();" id="liked" class="btn btn-block btn-primary">Like </button> -->
+        <div class="share-button">
+          <span> <i class=" fas fa-share-alt"></i> Share! </span>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//quizgamebybharat.netlify.app/"> <i class="fab fa-facebook-f"></i> </a>
+          <a href="https://twitter.com/intent/tweet?text=https%3A//quizgamebybharat.netlify.app/"> <i class="fab fa-twitter"></i> </a>
+          <a href="#"> <i class="fab fa-instagram"></i> </a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//quizgamebybharat.netlify.app/&title=quizGamebyBharat&summary=This%20is%20a%20simple%20quiz%20made%20by%20me%20using%20very%20basic%20JS,Bootstrap%20and%20HTML.&source=https%3A//bharatpaliwal-169.github.io/quizGamebyBharat.github.io/">
+             <i class="fab fa-linkedin-in"></i> </a>
+        </div>
+  
+      </div>
+  
+  </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="intrest.js"></script>
+</body>
+</html>

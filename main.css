@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.row-header{
+    margin:0px auto;
+    padding:0px;
+    text-align: center;
+}
+.container{
+    padding: 5px;
+    margin: 5px;
+}
+
+.footer{
+    background-color: #D1C4E9;
+    margin:0px auto;
+    padding: 20px 0px 20px 5px;
+}
+.jumbotron {
+    padding:70px 30px 70px 30px;
+    margin:0px auto;
+    background: lightgrey;
+    color:black;
+    
+}
+label{
+    color: black;
+}
