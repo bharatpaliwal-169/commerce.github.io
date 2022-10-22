@@ -5,88 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <script src="https://kit.fontawesome.com/5ba01f7dd3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="additional.css">
     <title>Commercial Calculator</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Fifth navbar example">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">Commercial Convertor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./page1.html">Page 1</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+            </li>
+        </ul>
+        <form role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        </div>
+    </div>
+</nav>
 <!-- Header -->
 <header class="jumbotron">
-    <div class="container">
-        <div class="row row-header">
-            <div class="col-12">
-                <h1 class="heading">Commercial Calculator & Convertor</h1>
+    <div class="container-fluid">
+        <div class="row bg-primary">
+            <div class="col-12 col-md-12 text-center justify-content-center">
+                <h1 class="heading">Commercial Calculator & Convertors</h1>
             </div>
         </div>
     </div>
 </header>
-<!-- Main Body -->
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-md-6 text-center">
-            <h4>
-                <a href="./page1.html">click here</a>
-            </h4>
-        </div>
-        <div class="col-12 col-md-10 ">
-            <div class="card">
-                <h3 class="card-header bg-dark text-white">S.I Calculator</h3>
 
+<!-- Main Body -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <h3 class="card-header bg-dark bg-gradient text-white">S.I Calculator</h3>
                 <div class="card-body">
                     <form>
                         <div class="form-group row">
                             <div  class="col-12 col-sm-9">
                                 <label for="principal">Principal(amount in Rs)</label>
-                                <input type="float" id="p">   
+                                <input type="float" id="p"/>   
                             </div>
                         </div>
                         <div class="form-group row">
                             <div  class="col-12 col-sm-9">
                                 <label for="principal">Rate(per year)</label>
-                                <input type="float" id="r">   
+                                <input type="float" id="r"/>   
                             </div>
                         </div>
                         <div class="form-group row">
                             <div  class="col-12 col-sm-9">
                                 <label for="principal">Time(in years)</label>
-                                <input type="float" id="t">   
+                                <input type="float" id="t"/>   
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-12 col-md-7 ">
-                              <button type="button" onclick="calculate()" class="btn btn-dark btn-lg" name="button">Evaluate</button>
+                            <div class="col-12 col-md-9">
+                              <button type="button" onclick="calculate()" class="btn btn-outline-dark btn-lg" name="button">Evaluate</button>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-12 col-md-7 ">
-                                <h3>SI : <span id="respond"></span></h3>  
+                            <div class="col-12 col-md-9">
+                                <p class="display-3">SI = <span id="respond"></span></h3>  
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
-<!-- Log Convertor -->
-    <div class="row">
-        <div class="col-12 col-md-10 ">
+
+        <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
                 <h3 class="card-header bg-dark text-white">Log Calculator</h3>
 
                 <div class="card-body">
                     <form>
                         <div class="form-group row">
-                            <div  class="col-12 col-md-12">
-                                <label for="principal">Value(to be converted) :</label>
-                                <input type="float" id="log">   
+                            <div  class="col-12 col-sm-9-12">
+                                <label for="principal">Value (to be converted) :</label>
+                                <input type="float" id="log" />   
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-12 col-md-12 ">
-                                <button type="button" onclick="calLog()" class="btn btn-dark btn-lg" name="button">Convert</button>
+                            <div class="col-12 col-sm-12">
+                                <button type="button" onclick="calLog()" class="btn btn-primary btn-lg bg-gradient" name="button">Convert</button>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -98,42 +122,43 @@
                 </div>
             </div>
         </div>
+
     </div>
 
-<!-- S.I Amount -->
+
     <div class="row">
-        <div class="col-12 col-md-10 ">
+        <div class="col-12 col-md-6 my-2 py-2">
             <div class="card">
-                <h3 class="card-header bg-dark text-white">S.I Amount Calculator</h3>
+                <h3 class="card-header bg-secondary text-danger bg-gradient">S.I Amount Calculator</h3>
 
                 <div class="card-body">
                     <form>
                         <div class="form-group row">
                             <div  class="col-12 col-sm-9">
-                                <label for="principal">Principal(amount in Rs)</label>
-                                <input type="float" id="p1">   
+                                <label for="principal">Principal </label>
+                                <input type="float" id="p1" />   
                             </div>
                         </div>
                         <div class="form-group row">
                             <div  class="col-12 col-sm-9">
-                                <label for="rate">Rate(per year)</label>
-                                <input type="float" id="r1">   
+                                <label for="rate">Rate (per year)</label>
+                                <input type="float" id="r1" />   
                             </div>
                         </div>
                         <div class="form-group row">
                             <div  class="col-12 col-sm-9">
-                                <label for="time">Time(in years)</label>
-                                <input type="float" id="t1">   
+                                <label for="time">Time (in years)</label>
+                                <input type="float" id="t1" />   
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-12 col-md-7 ">
-                                <button type="button" onclick="calculateAmount()" class="btn btn-dark btn-lg" name="button">Evaluate</button>
+                                <button type="button" onclick="calculateAmount()" class="btn btn-success btn-block" name="button">Evaluate</button>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-12 col-md-7 ">
-                                <h3>SI Amount(in Rs) : <span id="amount"></span></h3>  
+                            <div class="col-12 col-md-10">
+                                <p class="display-4">SI Amount (in Rs) : <span id="amount"></span></h3>  
                             </div>
                         </div>
                     </form>
@@ -194,31 +219,31 @@
 </div>
 
 <footer class="footer">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-10 ">
+            <div class="col-12 text-center">
                 <h6>Created &amp; Developed by:</h6>
-                <p>&copy Bharat Paliwal</p>
+                <p>&copy Divya Paliwal</p>
             </div>
+
             
-        
-            <div class="col-12 col-sm-10">
+            <div class="col-12">
                 <div class="share-button">
                     <span> <i class=" fas fa-share-alt"></i> Share! </span>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//quizgamebybharat.netlify.app/"> <i class="fab fa-facebook-f"></i> </a>
-                    <a href="https://twitter.com/intent/tweet?text=https%3A//quizgamebybharat.netlify.app/"> <i class="fab fa-twitter"></i> </a>
+                    <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                    <a href="https://quizgamebybharat.netlify.app/"> <i class="fab fa-twitter"></i> </a>
                     <a href="#"> <i class="fab fa-instagram"></i> </a>
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//quizgamebybharat.netlify.app/&title=quizGamebyBharat&summary=This%20is%20a%20simple%20quiz%20made%20by%20me%20using%20very%20basic%20JS,Bootstrap%20and%20HTML.&source=https%3A//bharatpaliwal-169.github.io/quizGamebyBharat.github.io/">
+                    <a href="#">
                         <i class="fab fa-linkedin-in"></i> </a>
                     </div>
             </div>
             <div class="col-12 col-sm-10">
                 <h2>Connect With Me : </h2>
                     <ul>
-                      <li> <a  href="https://www.facebook.com/bharat.paliwal.3958914" target="_blank"><i class="fab fa-facebook-f"></i></a>  </li>
-                      <li> <a href="https://www.linkedin.com/in/bharat-paliwal-ab7169179/" target="_blank"><i class="fab fa-twitter"></i></a>  </li>
+                      <li> <a  href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>  </li>
+                      <li> <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>  </li>
                       <li> <i class="fab fa-instagram"></i> </li>
-                      <li> <a href="https://twitter.com/BharatP58380618" target="_blank"><i class="fab fa-linkedin-in"></i></a>  </li>
+                      <li> <a href="#"  target="_blank"><i class="fab fa-linkedin-in"></i></a>  </li>
                     </ul>      
         </div>
     </div>
@@ -226,10 +251,7 @@
   
 
 
-<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="intrest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="./intrest.js"></script>
 </body>
 </html>
